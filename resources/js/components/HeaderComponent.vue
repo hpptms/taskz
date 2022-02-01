@@ -12,7 +12,7 @@
                     @endif
                     @if (Route::has('login'))
                         <div class="nav-item px-4 py-2 m-2">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a> 
                         </div>
                     @endif                          
                     @else
