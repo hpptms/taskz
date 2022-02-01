@@ -1,4 +1,4 @@
-//add
-import HeaderComponent from "./components/HeaderComponent";
+// //add
+// import HeaderComponent from "./components/HeaderComponent";
 
-Vue.component('header-component', HeaderComponent)
+// Vue.component('header-component', HeaderComponent);

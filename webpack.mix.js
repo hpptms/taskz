@@ -10,15 +10,8 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
- mix.js('resources/js/app.js', 'public/js').vue()
-    .js('resources/js/original.js', 'public/js').vue()
-    .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/original.scss', 'public/css')
-    .postCss('resources/css/app.css', 'public/css', [
-         require('postcss-import'),
-         require('tailwindcss'),
-]);
 
-if (mix.inProduction()) {
- mix.version();
-}
+mix.js('resources/js/app.js', 'public/js').vue()
+   .js('resources/js/original.js', 'public/js').vue()
+    .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/original.scss', 'public/css');
