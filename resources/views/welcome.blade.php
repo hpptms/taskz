@@ -31,7 +31,8 @@
 </head>
 <body>
     <div id="app">
-        @include('components.Header')
+        <header-component></header-component>
+        <router-view></router-view>
         <div id="bottoms" class="md:container md:mx-auto flex md:flex-wrap justify-between">
             @include('bottom.bottom1')
             @include('bottom.bottom2')
