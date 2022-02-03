@@ -52,6 +52,11 @@ button.btn-ori {
   position: relative;
 }
 
+.btn-ori:hover {
+  color: #000;
+  font: bold;
+}
+
 .btn-ori:before {
   position: absolute;
   top: 0;
@@ -61,20 +66,10 @@ button.btn-ori {
   content: "";
   transition: all 0.5s ease-in-out;
   transform: translateX(-96%);
-  color: #000;
-}
-
-.btn-ori div:before {
-  color: #000;
 }
 
 .btn-ori:hover:before {
   transform: translateX(0%);
-  color: #000;
-}
-
-.btn-ori div:hover:before {
-  color: #000;
 }
 
 .bf-red:before {

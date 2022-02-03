@@ -56,6 +56,11 @@ button.btn-ori {
 .btn-ori div {
     position: relative;
 }
+
+.btn-ori:hover{
+  color: #000;
+  font: bold;
+}
   
 .btn-ori:before {
     position: absolute;
@@ -68,20 +73,11 @@ button.btn-ori {
     transition: all .5s ease-in-out;
     -webkit-transform: translateX(-96%);
     transform: translateX(-96%);
-    color: #000;
-}
-.btn-ori div:before {
-    color: #000;
 }
   
 .btn-ori:hover:before {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
-    color: #000;
-}
-
-.btn-ori div:hover:before{
-    color: #000;
 }
 
 // ボタンの色
