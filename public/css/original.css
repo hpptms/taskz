@@ -71,19 +71,3 @@ button.btn-ori {
 .btn-ori:hover:before {
   transform: translateX(0%);
 }
-
-.bf-red:before {
-  background-color: crimson;
-}
-
-.bf-yellow:before {
-  background-color: yellow;
-}
-
-.bf-lime:before {
-  background-color: yellowgreen;
-}
-
-.bf-blue:before {
-  background-color: lightskyblue;
-}
