@@ -7,6 +7,10 @@
   font-family: 'Rowdies', cursive;
 }
 
+h1{
+  font-size: 4rem;
+}
+
 
 *,
 *:before,
@@ -20,9 +24,9 @@ html {
   box-sizing: border-box;
 }
 
-.btn,
-a.btn,
-button.btn {
+.btn-ori,
+a.btn-ori,
+button.btn-ori {
   line-height: 1.5;
   position: relative;
   display: inline-block;
@@ -42,18 +46,18 @@ button.btn {
   border-radius: 0.5rem;
 }
 
-.btn {
+.btn-ori {
     overflow: hidden;
     color: #fff;
     border-radius: 0;
     background: #000;
 }
   
-.btn div {
+.btn-ori div {
     position: relative;
 }
   
-.btn:before {
+.btn-ori:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -66,17 +70,33 @@ button.btn {
     transform: translateX(-96%);
     color: #000;
 }
-.btn div:before {
+.btn-ori div:before {
     color: #000;
 }
   
-.btn:hover:before {
+.btn-ori:hover:before {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
     color: #000;
 }
 
-.btn div:hover:before{
+.btn-ori div:hover:before{
     color: #000;
 }
 
+// ボタンの色
+.bf-red:before{
+  background-color: crimson;
+}
+
+.bf-yellow:before{
+  background-color:yellow;
+}
+
+.bf-lime:before{
+  background-color:yellowgreen;
+}
+
+.bf-blue:before{
+  background-color:lightskyblue;
+}
