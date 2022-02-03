@@ -9,9 +9,11 @@ import TaskListComponent from "./components/TaskListComponent";
 
 
 
-// require('./bootstrap');
+require('./bootstrap');
 
 window.Vue = require('vue').default;
+
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -26,20 +28,21 @@ window.Vue = require('vue').default;
 
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('header-component', HeaderComponent);
+Vue.component('header-component', HeaderComponent).default;
+Vue.component('tasklist-component', TaskListComponent).default;
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
     mode: 'history',
     routes: [
-        {
-            path: '/tasks',
-            name: 'task.list',
-            component: TaskListComponent
-        },
+      {
+        path: '/tasks',
+        name: 'task.list',
+        component: TaskListComponent
+      }
     ]
-});
+})
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -50,4 +53,4 @@ const router = new VueRouter({
 const app = new Vue({
     el: '#app',
     router
-});
+}).$mount('#app');

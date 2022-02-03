@@ -1,11 +1,13 @@
 <template>
-    <div class="md:container md:mx-auto">
+    <div class="container">
         <div>
-            <nav class="md:container md:mx-auto flex md:flex-wrap justify-between">
-                <span class="Yellowtail text-6xl">tasks</span>
+            <nav class="d-flex bd-highlight">
+                <h1 class="Yellowtail flex-grow-1 bd-highlight">tasks</h1>
                 <div>
-                    <button class="Rowdies">List</button>
-                    <button class="Rowdies">ADD</button>
+                    <router-link to="/tasks">
+                        <span class="Rowdies bd-highlight">List</span>
+                    </router-link>
+                    <span class="Rowdies bd-highlight">ADD</span>
                 </div>
             </nav>
         </div>
