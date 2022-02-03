@@ -1,13 +1,13 @@
 <template>
     <div class="container">
         <div>
-            <nav class="d-flex bd-highlight">
-                <h1 class="Yellowtail flex-grow-1 bd-highlight">tasks</h1>
+            <nav class="container">
+                <span class="Yellowtail text-6xl">tasks</span>
                 <div>
                     <router-link to="/tasks">
-                        <span class="Rowdies bd-highlight">List</span>
+                        <span class="Rowdies">List</span>
                     </router-link>
-                    <span class="Rowdies bd-highlight">ADD</span>
+                    <span class="Rowdies">ADD</span>
                 </div>
             </nav>
         </div>

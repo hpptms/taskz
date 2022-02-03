@@ -28232,23 +28232,17 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", [
-      _c("nav", { staticClass: "d-flex bd-highlight" }, [
-        _c("h1", { staticClass: "Yellowtail flex-grow-1 bd-highlight" }, [
-          _vm._v("tasks"),
-        ]),
+      _c("nav", { staticClass: "container" }, [
+        _c("span", { staticClass: "Yellowtail text-6xl" }, [_vm._v("tasks")]),
         _vm._v(" "),
         _c(
           "div",
           [
             _c("router-link", { attrs: { to: "/tasks" } }, [
-              _c("span", { staticClass: "Rowdies bd-highlight" }, [
-                _vm._v("List"),
-              ]),
+              _c("span", { staticClass: "Rowdies" }, [_vm._v("List")]),
             ]),
             _vm._v(" "),
-            _c("span", { staticClass: "Rowdies bd-highlight" }, [
-              _vm._v("ADD"),
-            ]),
+            _c("span", { staticClass: "Rowdies" }, [_vm._v("ADD")]),
           ],
           1
         ),
