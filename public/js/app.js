@@ -5495,6 +5495,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -28616,7 +28629,7 @@ var render = function () {
                   staticClass: "col-sm-3 col-form-label",
                   attrs: { for: "title" },
                 },
-                [_vm._v("Title")]
+                [_vm._v("Sector")]
               ),
               _vm._v(" "),
               _c("input", {
@@ -28649,7 +28662,7 @@ var render = function () {
                   staticClass: "col-sm-3 col-form-label",
                   attrs: { for: "content" },
                 },
-                [_vm._v("Content")]
+                [_vm._v("Title")]
               ),
               _vm._v(" "),
               _c("input", {
@@ -28682,7 +28695,7 @@ var render = function () {
                   staticClass: "col-sm-3 col-form-label",
                   attrs: { for: "person-in-charge" },
                 },
-                [_vm._v("Person In Charge")]
+                [_vm._v("Content")]
               ),
               _vm._v(" "),
               _c("input", {
@@ -28710,7 +28723,11 @@ var render = function () {
             _vm._v(" "),
             _c(
               "button",
-              { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+              {
+                staticClass: "btn btn-primary",
+                staticStyle: { "background-color": "#0d6efd" },
+                attrs: { type: "submit" },
+              },
               [_vm._v("\n                    Submit\n                ")]
             ),
           ]
@@ -28890,7 +28907,11 @@ var render = function () {
             _vm._v(" "),
             _c(
               "button",
-              { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+              {
+                staticClass: "btn btn-primary",
+                staticStyle: { "background-color": "#0d6efd" },
+                attrs: { type: "submit" },
+              },
               [_vm._v("\n                    Submit\n                ")]
             ),
           ]
@@ -28922,77 +28943,113 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    _vm._l(_vm.tasks, function (task, index) {
-      return _c("tr", { key: index }, [
-        _c("th", { attrs: { scope: "row" } }, [_vm._v(_vm._s(task.id))]),
+  return _c("div", { staticClass: "md:container md:mx-auto" }, [
+    _c(
+      "table",
+      { staticClass: "table table-hover" },
+      [
+        _vm._m(0),
         _vm._v(" "),
-        _c("td", [_vm._v(_vm._s(task.title))]),
-        _vm._v(" "),
-        _c("td", [_vm._v(_vm._s(task.content))]),
-        _vm._v(" "),
-        _c("td", [_vm._v(_vm._s(task.person_in_charge))]),
-        _vm._v(" "),
-        _c(
-          "td",
-          [
+        _vm._l(_vm.tasks, function (task, index) {
+          return _c("tr", { key: index }, [
+            _c("th", { attrs: { scope: "row" } }, [_vm._v(_vm._s(task.id))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(task.Sector))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(task.title))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(task.content))]),
+            _vm._v(" "),
             _c(
-              "router-link",
-              {
-                attrs: {
-                  to: {
-                    name: "task.show",
-                    params: { taskId: task.id },
-                  },
-                },
-              },
+              "td",
               [
-                _c("button", { staticClass: "btn btn-primary" }, [
-                  _vm._v("Show"),
-                ]),
-              ]
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: {
+                        name: "task.show",
+                        params: { taskId: task.id.toString() },
+                      },
+                    },
+                  },
+                  [
+                    _c("button", { staticClass: "btn btn-primary" }, [
+                      _vm._v("Show"),
+                    ]),
+                  ]
+                ),
+              ],
+              1
             ),
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "td",
-          [
+            _vm._v(" "),
             _c(
-              "router-link",
-              {
-                attrs: {
-                  to: {
-                    name: "task.edit",
-                    params: { taskId: task.id },
-                  },
-                },
-              },
+              "td",
               [
-                _c("button", { staticClass: "btn btn-success" }, [
-                  _vm._v("Edit"),
-                ]),
-              ]
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: {
+                        name: "task.edit",
+                        params: { taskId: task.id.toString() },
+                      },
+                    },
+                  },
+                  [
+                    _c("button", { staticClass: "btn btn-success" }, [
+                      _vm._v("Edit"),
+                    ]),
+                  ]
+                ),
+              ],
+              1
             ),
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _vm._m(0, true),
-      ])
-    }),
-    0
-  )
+            _vm._v(" "),
+            _vm._m(1, true),
+          ])
+        }),
+      ],
+      2
+    ),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-light" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Sector")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Title")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Content")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Show")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Edit")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("td", [
-      _c("button", { staticClass: "btn btn-danger" }, [_vm._v("Delete")]),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-danger",
+          staticStyle: { "background-color": "#dc3545" },
+        },
+        [_vm._v("Delete")]
+      ),
     ])
   },
 ]

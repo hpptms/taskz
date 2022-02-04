@@ -29,7 +29,7 @@
                         >
                         <input type="text" class="col-sm-9 form-control" id="person-in-charge" v-model="task.person_in_charge">
                     </div>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" style="background-color: #0d6efd;">
                         Submit
                     </button>
                 </form>

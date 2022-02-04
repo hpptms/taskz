@@ -14,4 +14,12 @@ class Task extends Model
         'content',
         'person_in_charge',
     ];
+
+    public function user() {
+        return $this->belongsTo('App\Models\User');
+    }
+
+    public function sector() {
+        return $this->belongsTo('App\Models\Sector');
+    }
 }
