@@ -42,6 +42,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * belongsTo associations.
+     *
+     * @var array
+     */
     public function task() {
         return $this->belongsTo('App\Models\Task');
     }

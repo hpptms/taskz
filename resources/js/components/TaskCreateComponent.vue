@@ -11,7 +11,7 @@
                             type="text"
                             class="col-sm-9 form-control"
                             id="title"
-                            v-model="task.Sector"
+                            v-model="task.sector"
                         />
                     </div>
                     <div class="form-group row">
@@ -22,7 +22,7 @@
                             type="text"
                             class="col-sm-9 form-control"
                             id="content"
-                            v-model="task.Title"
+                            v-model="task.title"
                         />
                     </div>
                     <div class="form-group row">
@@ -35,7 +35,7 @@
                             type="text"
                             class="col-sm-9 form-control"
                             id="person-in-charge"
-                            v-model="task.Content"
+                            v-model="task.content"
                         />
                     </div>
                     <button type="submit" class="btn btn-primary" style="background-color: #0d6efd;">

@@ -14,7 +14,7 @@
             </thead>
             <tr v-for="(task, index) in tasks" :key="index">
                 <th scope="row">{{ task.id }}</th>
-                <td>{{ task.Sector }}</td>
+                <td>{{ task.sector }}</td>
                 <td>{{ task.title }}</td>
                 <td>{{ task.content }}</td>
                 <td>

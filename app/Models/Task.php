@@ -15,6 +15,11 @@ class Task extends Model
         'person_in_charge',
     ];
 
+    /**
+     * belongsTo associations.
+     *
+     * @var array
+     */
     public function user() {
         return $this->belongsTo('App\Models\User');
     }

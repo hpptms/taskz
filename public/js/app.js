@@ -28637,19 +28637,19 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.task.title,
-                    expression: "task.title",
+                    value: _vm.task.sector,
+                    expression: "task.sector",
                   },
                 ],
                 staticClass: "col-sm-9 form-control",
                 attrs: { type: "text", id: "title" },
-                domProps: { value: _vm.task.title },
+                domProps: { value: _vm.task.sector },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.task, "title", $event.target.value)
+                    _vm.$set(_vm.task, "sector", $event.target.value)
                   },
                 },
               }),
@@ -28670,19 +28670,19 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.task.content,
-                    expression: "task.content",
+                    value: _vm.task.title,
+                    expression: "task.title",
                   },
                 ],
                 staticClass: "col-sm-9 form-control",
                 attrs: { type: "text", id: "content" },
-                domProps: { value: _vm.task.content },
+                domProps: { value: _vm.task.title },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.task, "content", $event.target.value)
+                    _vm.$set(_vm.task, "title", $event.target.value)
                   },
                 },
               }),
@@ -28703,19 +28703,19 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.task.person_in_charge,
-                    expression: "task.person_in_charge",
+                    value: _vm.task.content,
+                    expression: "task.content",
                   },
                 ],
                 staticClass: "col-sm-9 form-control",
                 attrs: { type: "text", id: "person-in-charge" },
-                domProps: { value: _vm.task.person_in_charge },
+                domProps: { value: _vm.task.content },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.task, "person_in_charge", $event.target.value)
+                    _vm.$set(_vm.task, "content", $event.target.value)
                   },
                 },
               }),
@@ -28813,7 +28813,7 @@ var render = function () {
                   staticClass: "col-sm-3 col-form-label",
                   attrs: { for: "title" },
                 },
-                [_vm._v("Title")]
+                [_vm._v("Sector")]
               ),
               _vm._v(" "),
               _c("input", {
@@ -28821,19 +28821,19 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.task.title,
-                    expression: "task.title",
+                    value: _vm.task.Sector,
+                    expression: "task.Sector",
                   },
                 ],
                 staticClass: "col-sm-9 form-control",
                 attrs: { type: "text", id: "title" },
-                domProps: { value: _vm.task.title },
+                domProps: { value: _vm.task.Sector },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.task, "title", $event.target.value)
+                    _vm.$set(_vm.task, "Sector", $event.target.value)
                   },
                 },
               }),
@@ -28846,7 +28846,7 @@ var render = function () {
                   staticClass: "col-sm-3 col-form-label",
                   attrs: { for: "content" },
                 },
-                [_vm._v("Content")]
+                [_vm._v("Title")]
               ),
               _vm._v(" "),
               _c("input", {
@@ -28854,19 +28854,19 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.task.content,
-                    expression: "task.content",
+                    value: _vm.task.Title,
+                    expression: "task.Title",
                   },
                 ],
                 staticClass: "col-sm-9 form-control",
                 attrs: { type: "text", id: "content" },
-                domProps: { value: _vm.task.content },
+                domProps: { value: _vm.task.Title },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.task, "content", $event.target.value)
+                    _vm.$set(_vm.task, "Title", $event.target.value)
                   },
                 },
               }),
@@ -28879,7 +28879,7 @@ var render = function () {
                   staticClass: "col-sm-3 col-form-label",
                   attrs: { for: "person-in-charge" },
                 },
-                [_vm._v("Person In Charge")]
+                [_vm._v("Content")]
               ),
               _vm._v(" "),
               _c("input", {
@@ -28887,19 +28887,19 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.task.person_in_charge,
-                    expression: "task.person_in_charge",
+                    value: _vm.task.Content,
+                    expression: "task.Content",
                   },
                 ],
                 staticClass: "col-sm-9 form-control",
                 attrs: { type: "text", id: "person-in-charge" },
-                domProps: { value: _vm.task.person_in_charge },
+                domProps: { value: _vm.task.Content },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.task, "person_in_charge", $event.target.value)
+                    _vm.$set(_vm.task, "Content", $event.target.value)
                   },
                 },
               }),
@@ -28954,7 +28954,7 @@ var render = function () {
           return _c("tr", { key: index }, [
             _c("th", { attrs: { scope: "row" } }, [_vm._v(_vm._s(task.id))]),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(task.Sector))]),
+            _c("td", [_vm._v(_vm._s(task.sector))]),
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(task.title))]),
             _vm._v(" "),

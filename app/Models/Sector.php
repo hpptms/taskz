@@ -13,6 +13,11 @@ class Sector extends Model
         'name',
     ];
 
+    /**
+     * belongsTo associations.
+     *
+     * @var array
+     */
     public function task() {
         return $this->belongsTo('App\Models\Task');
     }
