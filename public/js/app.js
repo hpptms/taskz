@@ -5344,7 +5344,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'TaskCreate',
+  props: ['message'],
   data: function data() {
     return {
       task: {}
@@ -5655,7 +5660,7 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component("header-component", _components_HeaderComponent__WEBPACK_IMPORTED_MODULE_0__["default"])["default"];
-Vue.component("tasklist-component", _components_TaskListComponent__WEBPACK_IMPORTED_MODULE_1__["default"])["default"];
+Vue.component("tasklist-component", _components_TaskCreateComponent__WEBPACK_IMPORTED_MODULE_3__["default"])["default"];
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]({
   mode: "history",
@@ -28627,7 +28632,7 @@ var render = function () {
                 "label",
                 {
                   staticClass: "col-sm-3 col-form-label",
-                  attrs: { for: "title" },
+                  attrs: { for: "Sector" },
                 },
                 [_vm._v("Sector")]
               ),
@@ -28642,7 +28647,7 @@ var render = function () {
                   },
                 ],
                 staticClass: "col-sm-9 form-control",
-                attrs: { type: "text", id: "title" },
+                attrs: { type: "text", id: "Sector", readonly: "readonly" },
                 domProps: { value: _vm.task.sector },
                 on: {
                   input: function ($event) {
@@ -28660,7 +28665,7 @@ var render = function () {
                 "label",
                 {
                   staticClass: "col-sm-3 col-form-label",
-                  attrs: { for: "content" },
+                  attrs: { for: "Title" },
                 },
                 [_vm._v("Title")]
               ),
@@ -28675,7 +28680,7 @@ var render = function () {
                   },
                 ],
                 staticClass: "col-sm-9 form-control",
-                attrs: { type: "text", id: "content" },
+                attrs: { type: "text", id: "Title" },
                 domProps: { value: _vm.task.title },
                 on: {
                   input: function ($event) {
@@ -28693,7 +28698,7 @@ var render = function () {
                 "label",
                 {
                   staticClass: "col-sm-3 col-form-label",
-                  attrs: { for: "person-in-charge" },
+                  attrs: { for: "Content" },
                 },
                 [_vm._v("Content")]
               ),
@@ -28708,7 +28713,7 @@ var render = function () {
                   },
                 ],
                 staticClass: "col-sm-9 form-control",
-                attrs: { type: "text", id: "person-in-charge" },
+                attrs: { type: "text", id: "Content" },
                 domProps: { value: _vm.task.content },
                 on: {
                   input: function ($event) {
@@ -28730,6 +28735,10 @@ var render = function () {
               },
               [_vm._v("\n                    Submit\n                ")]
             ),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.message))]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.message))]),
           ]
         ),
       ]),

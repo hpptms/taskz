@@ -4,43 +4,46 @@
             <div class="col-sm-6">
                 <form v-on:submit.prevent="submit">
                     <div class="form-group row">
-                        <label for="title" class="col-sm-3 col-form-label"
+                        <label for="Sector" class="col-sm-3 col-form-label"
                             >Sector</label
                         >
                         <input
                             type="text"
                             class="col-sm-9 form-control"
-                            id="title"
+                            id="Sector"
+                            readonly="readonly"
                             v-model="task.sector"
                         />
                     </div>
                     <div class="form-group row">
-                        <label for="content" class="col-sm-3 col-form-label"
+                        <label for="Title" class="col-sm-3 col-form-label"
                             >Title</label
                         >
                         <input
                             type="text"
                             class="col-sm-9 form-control"
-                            id="content"
+                            id="Title"
                             v-model="task.title"
                         />
                     </div>
                     <div class="form-group row">
                         <label
-                            for="person-in-charge"
+                            for="Content"
                             class="col-sm-3 col-form-label"
                             >Content</label
                         >
                         <input
                             type="text"
                             class="col-sm-9 form-control"
-                            id="person-in-charge"
+                            id="Content"
                             v-model="task.content"
                         />
                     </div>
                     <button type="submit" class="btn btn-primary" style="background-color: #0d6efd;">
                         Submit
                     </button>
+                    <p>{{ message }}</p>
+                    <p>{{ message }}</p>
                 </form>
             </div>
         </div>
@@ -49,6 +52,8 @@
 
 <script>
 export default {
+    name: 'TaskCreate',
+    props: ['message'],
     data: function () {
         return {
             task: {},
