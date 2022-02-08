@@ -5389,7 +5389,8 @@ __webpack_require__.r(__webpack_exports__);
         u_id: $("#login_user").val(),
         s_id: $('#is_Sector').text(),
         title: this.task.title,
-        content: this.task.content
+        content: this.task.content,
+        se_id: $("#session").val()
       }).then(function (res) {
         _this.$router.push({
           name: "task.list"
@@ -5412,22 +5413,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -5596,6 +5581,13 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get("/api/tasks").then(function (res) {
         _this.tasks = res.data;
+      });
+    },
+    deleteTask: function deleteTask(id) {
+      var _this2 = this;
+
+      axios["delete"]("/api/tasks/" + id).then(function (res) {
+        _this2.getTasks();
       });
     }
   },
@@ -28721,12 +28713,7 @@ var render = function () {
                     },
                   ],
                   staticClass: "form-check-input",
-                  attrs: {
-                    type: "radio",
-                    id: "val1",
-                    name: "Sector",
-                    value: "1",
-                  },
+                  attrs: { type: "radio", name: "Sector", value: "1" },
                   domProps: { checked: _vm._q(_vm.task.s_id, "1") },
                   on: {
                     change: function ($event) {
@@ -28823,7 +28810,10 @@ var render = function () {
                 ),
               ]),
               _vm._v(" "),
-              _c("span", { attrs: { id: "is_Sector" } }),
+              _c("span", {
+                staticStyle: { display: "none" },
+                attrs: { id: "is_Sector" },
+              }),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group row" }, [
@@ -28967,12 +28957,7 @@ var render = function () {
                     },
                   ],
                   staticClass: "form-check-input",
-                  attrs: {
-                    type: "radio",
-                    id: "val1",
-                    name: "Sector",
-                    value: "1",
-                  },
+                  attrs: { type: "radio", name: "Sector", value: "1" },
                   domProps: { checked: _vm._q(_vm.task.s_id, "1") },
                   on: {
                     change: function ($event) {
@@ -29239,7 +29224,21 @@ var render = function () {
               1
             ),
             _vm._v(" "),
-            _vm._m(1, true),
+            _c("td", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger",
+                  staticStyle: { "background-color": "#dc3545" },
+                  on: {
+                    click: function ($event) {
+                      return _vm.deleteTask(task.id)
+                    },
+                  },
+                },
+                [_vm._v("Delete")]
+              ),
+            ]),
           ])
         }),
       ],
@@ -29268,21 +29267,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")]),
       ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-danger",
-          staticStyle: { "background-color": "#dc3545" },
-        },
-        [_vm._v("Delete")]
-      ),
     ])
   },
 ]
