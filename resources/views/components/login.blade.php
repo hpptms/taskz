@@ -6,9 +6,6 @@
                 <router-link to="/tasks">
                     <span class="Rowdies">List</span>
                 </router-link>
-                <router-link v-bind:to="{name: 'task.create'}">
-                <span class="Rowdies">ADD</span>
-                </router-link>
                     @guest
                         @if (Route::has('login'))
                             <span>
@@ -27,6 +24,7 @@
                                 {{ Auth::user()->name }}
                             </a>
                             <input style="display:none" value="{{ Auth::user()->id }}" id="login_user">
+                            <input style="display:none" value="{{ Session::getId() }}" id="session">
     
                             <span class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a href="{{ route('logout') }}"

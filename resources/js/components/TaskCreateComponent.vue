@@ -40,7 +40,7 @@
                         <input type="radio" class="form-check-input" name="Sector" value="4" v-model="task.s_id">
                         <label class="form-check-label" for="one">「重要」でもないが「緊急」でもないもの</label>
                         </div>
-                        <span id="is_Sector"></span>
+                        <span style="display:none;" id="is_Sector"></span>
                     </div>
                     <div class="form-group row">
                         <label for="Title" class="col-sm-3 col-form-label"
@@ -91,7 +91,8 @@ export default {
                 u_id:$("#login_user").val(),
                 s_id:$('#is_Sector').text(),
                 title:this.task.title,
-                content:this.task.content
+                content:this.task.content,
+                se_id:$("#session").val()
             }).then((res) => {
                 this.$router.push({ name: "task.list" });
             });

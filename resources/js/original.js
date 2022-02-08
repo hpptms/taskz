@@ -1,6 +1,6 @@
 $(function () {
     $(document).on("click blur", "#botton1", function () {
-        document.querySelector('#val1').checked = true;
+        $('input[name=Sector]:eq(0)').prop('checked', true);
         input_chake();
     });
 
