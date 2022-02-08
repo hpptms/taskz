@@ -41,4 +41,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * hasOne associations.
+     *
+     * @var array
+     */
+    public function task() {
+        return $this->hasOne('App\Models\Task');
+    }
 }

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function() {
+     return view('welcome');
+});
 
-Route::get('/{any}', function() {
+Route::get('/tasks{any}', function() {
      return view('welcome');
 })->where('any', '.*');
 
-// Route::get('/{any}', function() {
-//      return view('test');
-// })->where('any', '.*');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

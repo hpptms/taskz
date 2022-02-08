@@ -26,7 +26,7 @@ button.btn-ori {
   line-height: 1.5;
   position: relative;
   display: inline-block;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -72,18 +72,13 @@ button.btn-ori {
   transform: translateX(0%);
 }
 
-.bf-red:before {
-  background-color: crimson;
+.navbar-brand {
+  font-size: 3rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 
-.bf-yellow:before {
-  background-color: yellow;
-}
-
-.bf-lime:before {
-  background-color: yellowgreen;
-}
-
-.bf-blue:before {
-  background-color: lightskyblue;
+.navbar {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
