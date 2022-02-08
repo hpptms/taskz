@@ -13,12 +13,21 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $id = Auth::user()->id;
-        $tasks = Task::where('u_id', $id)
+        if(Auth::user()->id){
+            $id = Auth::user()->id;
+            $tasks = Task::where('u_id', $id)
             ->orderBy('id', 'asc')
             ->Join('sectors', 'tasks.s_id', '=', 'sectors.id')
             ->select('tasks.id as id', 'sectors.name as sector', 'tasks.title as title', 'tasks.content as content')
             ->get();
+        }else{
+            $se_id = Session::getId();
+            $tasks = Task::where('se_id', $se_id)
+            ->orderBy('id', 'asc')
+            ->Join('sectors', 'tasks.s_id', '=', 'sectors.id')
+            ->select('tasks.id as id', 'sectors.name as sector', 'tasks.title as title', 'tasks.content as content')
+            ->get();
+        }
 
         return $tasks;
     }
