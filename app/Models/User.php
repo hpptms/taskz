@@ -43,11 +43,11 @@ class User extends Authenticatable
     ];
 
     /**
-     * belongsTo associations.
+     * hasOne associations.
      *
      * @var array
      */
     public function task() {
-        return $this->belongsTo('App\Models\Task');
+        return $this->hasOne('App\Models\Task');
     }
 }

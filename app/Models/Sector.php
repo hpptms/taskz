@@ -14,11 +14,16 @@ class Sector extends Model
     ];
 
     /**
-     * belongsTo associations.
+     * hasOne associations.
      *
      * @var array
      */
     public function task() {
-        return $this->belongsTo('App\Models\Task');
+        return $this->hasOne('App\Models\Task');
+    }
+
+    public function getname()
+    {
+        return $this->name;
     }
 }

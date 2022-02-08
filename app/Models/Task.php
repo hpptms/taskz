@@ -10,21 +10,23 @@ class Task extends Model
     use HasFactory;
 
     protected $fillable = [
+        'u_id',
+        's_id',
         'title',
         'content',
-        'person_in_charge',
+        'se_id',
     ];
 
     /**
-     * belongsTo associations.
+     * hasOne associations.
      *
      * @var array
      */
     public function user() {
-        return $this->belongsTo('App\Models\User');
+        return $this->hasOne('App\Models\User');
     }
 
     public function sector() {
-        return $this->belongsTo('App\Models\Sector');
+        return $this->hasOne('App\Models\Sector');
     }
 }

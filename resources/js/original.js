@@ -1,17 +1,26 @@
 $(function () {
     $(document).on("click blur", "#botton1", function () {
-        $("#Sector").val("「重要」で「緊急」なもの");
+        document.querySelector('#val1').checked = true;
+        input_chake();
     });
 
     $(document).on("click blur", "#botton2", function () {
-        $("#Sector").val("「重要」だけど「緊急」でないもの");
+        $('input[name=Sector]:eq(1)').prop('checked', true);
+        input_chake();
     });
 
     $(document).on("click blur", "#botton3", function () {
-        $("#Sector").val("「重要」ではないが「緊急」なもの");
+        $('input[name=Sector]:eq(2)').prop('checked', true);
+        input_chake();
     });
 
     $(document).on("click blur", "#botton4", function () {
-        $("#Sector").val("「重要」でもないが「緊急」でもないもの");
+        $('input[name=Sector]:eq(3)').prop('checked', true);
+        input_chake();
     });
+
+    function input_chake(){
+        $('#is_Sector').text($('input[name=Sector]:checked').val());
+        console.log($('input[name=Sector]:checked').val());
+    }
 });

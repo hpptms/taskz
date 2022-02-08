@@ -13,33 +13,33 @@
                             v-model="task.id"/>
                     </div>
                     <div class="form-group row border-bottom">
-                        <label for="title" class="col-sm-3 col-form-label">Title</label>
+                        <label for="title" class="col-sm-3 col-form-label">sectors</label>
                         <input
                             type="text"
                             class="col-sm-9 form-control-plaintext"
                             readonly
                             id="title"
-                            v-model="task.title"/>
+                            v-model="task.s_id"/>
                     </div>
                     <div class="form-group row border-bottom">
-                        <label for="content" class="col-sm-3 col-form-label">Content</label>
+                        <label for="content" class="col-sm-3 col-form-label">title</label>
                         <input
                             type="text"
                             class="col-sm-9 form-control-plaintext"
                             readonly
                             id="content"
-                            v-model="task.content"/>
+                            v-model="task.title"/>
                     </div>
                     <div class="form-group row border-bottom">
                         <label
                             for="person-in-charge"
-                            class="col-sm-3 col-form-label">Person In Charge</label>
+                            class="col-sm-3 col-form-label">content</label>
                         <input
                             type="text"
                             class="col-sm-9 form-control-plaintext"
                             readonly
                             id="person-in-charge"
-                            v-model="task.person_in_charge"/>
+                            v-model="task.content"/>
                     </div>
                 </form>
             </div>

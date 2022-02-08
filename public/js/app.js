@@ -5347,9 +5347,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'TaskCreate',
-  props: ['message'],
   data: function data() {
     return {
       task: {}
@@ -5359,7 +5385,12 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       var _this = this;
 
-      axios.post("/api/tasks", this.task).then(function (res) {
+      axios.post("/api/tasks", {
+        u_id: $("#login_user").val(),
+        s_id: $('#is_Sector').text(),
+        title: this.task.title,
+        content: this.task.content
+      }).then(function (res) {
         _this.$router.push({
           name: "task.list"
         });
@@ -5381,6 +5412,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -28613,7 +28684,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "container create" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-sm-6" }, [
         _c(
@@ -28627,6 +28698,8 @@ var render = function () {
             },
           },
           [
+            _c("br"),
+            _vm._v(" "),
             _c("div", { staticClass: "form-group row" }, [
               _c(
                 "label",
@@ -28637,27 +28710,120 @@ var render = function () {
                 [_vm._v("Sector")]
               ),
               _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.task.sector,
-                    expression: "task.sector",
+              _c("div", { staticClass: "form-check" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.task.s_id,
+                      expression: "task.s_id",
+                    },
+                  ],
+                  staticClass: "form-check-input",
+                  attrs: {
+                    type: "radio",
+                    id: "val1",
+                    name: "Sector",
+                    value: "1",
                   },
-                ],
-                staticClass: "col-sm-9 form-control",
-                attrs: { type: "text", id: "Sector", readonly: "readonly" },
-                domProps: { value: _vm.task.sector },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.task, "sector", $event.target.value)
+                  domProps: { checked: _vm._q(_vm.task.s_id, "1") },
+                  on: {
+                    change: function ($event) {
+                      return _vm.$set(_vm.task, "s_id", "1")
+                    },
                   },
-                },
-              }),
+                }),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  { staticClass: "form-check-label", attrs: { for: "one" } },
+                  [_vm._v("「重要」で「緊急」なもの")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-check" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.task.s_id,
+                      expression: "task.s_id",
+                    },
+                  ],
+                  staticClass: "form-check-input",
+                  attrs: { type: "radio", name: "Sector", value: "2" },
+                  domProps: { checked: _vm._q(_vm.task.s_id, "2") },
+                  on: {
+                    change: function ($event) {
+                      return _vm.$set(_vm.task, "s_id", "2")
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  { staticClass: "form-check-label", attrs: { for: "one" } },
+                  [_vm._v("「重要」だけど「緊急」でないもの")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-check" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.task.s_id,
+                      expression: "task.s_id",
+                    },
+                  ],
+                  staticClass: "form-check-input",
+                  attrs: { type: "radio", name: "Sector", value: "3" },
+                  domProps: { checked: _vm._q(_vm.task.s_id, "3") },
+                  on: {
+                    change: function ($event) {
+                      return _vm.$set(_vm.task, "s_id", "3")
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  { staticClass: "form-check-label", attrs: { for: "one" } },
+                  [_vm._v("「重要」ではないが「緊急」なもの")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-check" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.task.s_id,
+                      expression: "task.s_id",
+                    },
+                  ],
+                  staticClass: "form-check-input",
+                  attrs: { type: "radio", name: "Sector", value: "4" },
+                  domProps: { checked: _vm._q(_vm.task.s_id, "4") },
+                  on: {
+                    change: function ($event) {
+                      return _vm.$set(_vm.task, "s_id", "4")
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  { staticClass: "form-check-label", attrs: { for: "one" } },
+                  [_vm._v("「重要」でもないが「緊急」でもないもの")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("span", { attrs: { id: "is_Sector" } }),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group row" }, [
@@ -28731,14 +28897,10 @@ var render = function () {
               {
                 staticClass: "btn btn-primary",
                 staticStyle: { "background-color": "#0d6efd" },
-                attrs: { type: "submit" },
+                attrs: { type: "submit", id: "created" },
               },
               [_vm._v("\n                    Submit\n                ")]
             ),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.message))]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.message))]),
           ]
         ),
       ]),
@@ -28782,70 +28944,132 @@ var render = function () {
             },
           },
           [
-            _c("div", { staticClass: "form-group row" }, [
-              _c(
-                "label",
-                {
-                  staticClass: "col-sm-3 col-form-label",
-                  attrs: { for: "id" },
-                },
-                [_vm._v("ID")]
-              ),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.task.id,
-                    expression: "task.id",
-                  },
-                ],
-                staticClass: "col-sm-9 form-control-plaintext",
-                attrs: { type: "text", readonly: "", id: "id" },
-                domProps: { value: _vm.task.id },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.task, "id", $event.target.value)
-                  },
-                },
-              }),
-            ]),
+            _c("br"),
             _vm._v(" "),
             _c("div", { staticClass: "form-group row" }, [
               _c(
                 "label",
                 {
                   staticClass: "col-sm-3 col-form-label",
-                  attrs: { for: "title" },
+                  attrs: { for: "Sector" },
                 },
                 [_vm._v("Sector")]
               ),
               _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.task.Sector,
-                    expression: "task.Sector",
+              _c("div", { staticClass: "form-check" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.task.s_id,
+                      expression: "task.s_id",
+                    },
+                  ],
+                  staticClass: "form-check-input",
+                  attrs: {
+                    type: "radio",
+                    id: "val1",
+                    name: "Sector",
+                    value: "1",
                   },
-                ],
-                staticClass: "col-sm-9 form-control",
-                attrs: { type: "text", id: "title" },
-                domProps: { value: _vm.task.Sector },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.task, "Sector", $event.target.value)
+                  domProps: { checked: _vm._q(_vm.task.s_id, "1") },
+                  on: {
+                    change: function ($event) {
+                      return _vm.$set(_vm.task, "s_id", "1")
+                    },
                   },
-                },
-              }),
+                }),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  { staticClass: "form-check-label", attrs: { for: "one" } },
+                  [_vm._v("「重要」で「緊急」なもの")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-check" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.task.s_id,
+                      expression: "task.s_id",
+                    },
+                  ],
+                  staticClass: "form-check-input",
+                  attrs: { type: "radio", name: "Sector", value: "2" },
+                  domProps: { checked: _vm._q(_vm.task.s_id, "2") },
+                  on: {
+                    change: function ($event) {
+                      return _vm.$set(_vm.task, "s_id", "2")
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  { staticClass: "form-check-label", attrs: { for: "one" } },
+                  [_vm._v("「重要」だけど「緊急」でないもの")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-check" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.task.s_id,
+                      expression: "task.s_id",
+                    },
+                  ],
+                  staticClass: "form-check-input",
+                  attrs: { type: "radio", name: "Sector", value: "3" },
+                  domProps: { checked: _vm._q(_vm.task.s_id, "3") },
+                  on: {
+                    change: function ($event) {
+                      return _vm.$set(_vm.task, "s_id", "3")
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  { staticClass: "form-check-label", attrs: { for: "one" } },
+                  [_vm._v("「重要」ではないが「緊急」なもの")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-check" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.task.s_id,
+                      expression: "task.s_id",
+                    },
+                  ],
+                  staticClass: "form-check-input",
+                  attrs: { type: "radio", name: "Sector", value: "4" },
+                  domProps: { checked: _vm._q(_vm.task.s_id, "4") },
+                  on: {
+                    change: function ($event) {
+                      return _vm.$set(_vm.task, "s_id", "4")
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  { staticClass: "form-check-label", attrs: { for: "one" } },
+                  [_vm._v("「重要」でもないが「緊急」でもないもの")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("span", { attrs: { id: "is_Sector" } }),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group row" }, [
@@ -28853,7 +29077,7 @@ var render = function () {
                 "label",
                 {
                   staticClass: "col-sm-3 col-form-label",
-                  attrs: { for: "content" },
+                  attrs: { for: "Title" },
                 },
                 [_vm._v("Title")]
               ),
@@ -28863,19 +29087,19 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.task.Title,
-                    expression: "task.Title",
+                    value: _vm.task.title,
+                    expression: "task.title",
                   },
                 ],
                 staticClass: "col-sm-9 form-control",
-                attrs: { type: "text", id: "content" },
-                domProps: { value: _vm.task.Title },
+                attrs: { type: "text", id: "Title" },
+                domProps: { value: _vm.task.title },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.task, "Title", $event.target.value)
+                    _vm.$set(_vm.task, "title", $event.target.value)
                   },
                 },
               }),
@@ -28886,7 +29110,7 @@ var render = function () {
                 "label",
                 {
                   staticClass: "col-sm-3 col-form-label",
-                  attrs: { for: "person-in-charge" },
+                  attrs: { for: "Content" },
                 },
                 [_vm._v("Content")]
               ),
@@ -28896,19 +29120,19 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.task.Content,
-                    expression: "task.Content",
+                    value: _vm.task.content,
+                    expression: "task.content",
                   },
                 ],
                 staticClass: "col-sm-9 form-control",
-                attrs: { type: "text", id: "person-in-charge" },
-                domProps: { value: _vm.task.Content },
+                attrs: { type: "text", id: "Content" },
+                domProps: { value: _vm.task.content },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.task, "Content", $event.target.value)
+                    _vm.$set(_vm.task, "content", $event.target.value)
                   },
                 },
               }),
@@ -28919,7 +29143,7 @@ var render = function () {
               {
                 staticClass: "btn btn-primary",
                 staticStyle: { "background-color": "#0d6efd" },
-                attrs: { type: "submit" },
+                attrs: { type: "submit", id: "created" },
               },
               [_vm._v("\n                    Submit\n                ")]
             ),
@@ -29125,7 +29349,40 @@ var render = function () {
                 staticClass: "col-sm-3 col-form-label",
                 attrs: { for: "title" },
               },
-              [_vm._v("Title")]
+              [_vm._v("sectors")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.task.s_id,
+                  expression: "task.s_id",
+                },
+              ],
+              staticClass: "col-sm-9 form-control-plaintext",
+              attrs: { type: "text", readonly: "", id: "title" },
+              domProps: { value: _vm.task.s_id },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.task, "s_id", $event.target.value)
+                },
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group row border-bottom" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-sm-3 col-form-label",
+                attrs: { for: "content" },
+              },
+              [_vm._v("title")]
             ),
             _vm._v(" "),
             _c("input", {
@@ -29138,7 +29395,7 @@ var render = function () {
                 },
               ],
               staticClass: "col-sm-9 form-control-plaintext",
-              attrs: { type: "text", readonly: "", id: "title" },
+              attrs: { type: "text", readonly: "", id: "content" },
               domProps: { value: _vm.task.title },
               on: {
                 input: function ($event) {
@@ -29156,9 +29413,9 @@ var render = function () {
               "label",
               {
                 staticClass: "col-sm-3 col-form-label",
-                attrs: { for: "content" },
+                attrs: { for: "person-in-charge" },
               },
-              [_vm._v("Content")]
+              [_vm._v("content")]
             ),
             _vm._v(" "),
             _c("input", {
@@ -29171,7 +29428,7 @@ var render = function () {
                 },
               ],
               staticClass: "col-sm-9 form-control-plaintext",
-              attrs: { type: "text", readonly: "", id: "content" },
+              attrs: { type: "text", readonly: "", id: "person-in-charge" },
               domProps: { value: _vm.task.content },
               on: {
                 input: function ($event) {
@@ -29179,39 +29436,6 @@ var render = function () {
                     return
                   }
                   _vm.$set(_vm.task, "content", $event.target.value)
-                },
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group row border-bottom" }, [
-            _c(
-              "label",
-              {
-                staticClass: "col-sm-3 col-form-label",
-                attrs: { for: "person-in-charge" },
-              },
-              [_vm._v("Person In Charge")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.task.person_in_charge,
-                  expression: "task.person_in_charge",
-                },
-              ],
-              staticClass: "col-sm-9 form-control-plaintext",
-              attrs: { type: "text", readonly: "", id: "person-in-charge" },
-              domProps: { value: _vm.task.person_in_charge },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.task, "person_in_charge", $event.target.value)
                 },
               },
             }),
