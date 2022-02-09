@@ -33,7 +33,7 @@
 <body>
     <div id="app">
         @include('components.login')
-        <div id="bottoms" class="md:container md:mx-auto flex md:flex-wrap justify-between">
+        <div id="bottoms" class="container flex justify-between lg:mx-auto flex-wrap">
             @include('bottom.bottom1')
             @include('bottom.bottom2')
             @include('bottom.bottom3')

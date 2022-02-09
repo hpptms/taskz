@@ -82,3 +82,15 @@ button.btn-ori {
   padding-top: 0rem;
   padding-bottom: 0rem;
 }
+
+@media screen and (max-width: 768px) {
+  .btn-ori,
+a.btn-ori,
+button.btn-ori {
+    padding: 0.5rem 1rem;
+  }
+
+  .content {
+    display: none;
+  }
+}

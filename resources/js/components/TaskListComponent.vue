@@ -6,7 +6,7 @@
           <th scope="col">#</th>
           <th scope="col">Sector</th>
           <th scope="col">Title</th>
-          <th scope="col">Content</th>
+          <th scope="col" class="content">Content</th>
           <th scope="col">Show</th>
           <th scope="col">Edit</th>
           <th scope="col">Delete</th>
@@ -14,9 +14,9 @@
       </thead>
       <tr v-for="(task, index) in tasks" :key="index">
         <th scope="row">{{ index }}</th>
-        <td>{{ task.sector }}</td>
+        <td class="sector">{{ task.sector }}</td>
         <td>{{ task.title }}</td>
-        <td>{{ task.content }}</td>
+        <td class="contents">{{ task.content }}</td>
         <td>
           <router-link
             v-bind:to="{

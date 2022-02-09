@@ -29051,11 +29051,13 @@ var render = function () {
           return _c("tr", { key: index }, [
             _c("th", { attrs: { scope: "row" } }, [_vm._v(_vm._s(index))]),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(task.sector))]),
+            _c("td", { staticClass: "sector" }, [_vm._v(_vm._s(task.sector))]),
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(task.title))]),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(task.content))]),
+            _c("td", { staticClass: "contents" }, [
+              _vm._v(_vm._s(task.content)),
+            ]),
             _vm._v(" "),
             _c(
               "td",
@@ -29138,7 +29140,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Title")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Content")]),
+        _c("th", { staticClass: "content", attrs: { scope: "col" } }, [
+          _vm._v("Content"),
+        ]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Show")]),
         _vm._v(" "),

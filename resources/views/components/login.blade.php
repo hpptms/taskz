@@ -4,7 +4,7 @@
             <span class="Yellowtail text-6xl">tasks</span>
             <div>
                 <router-link to="/tasks">
-                    <span class="Rowdies">List</span>
+                    <span class="Rowdies" id="list">List</span>
                 </router-link>
                     @guest
                         @if (Route::has('login'))
