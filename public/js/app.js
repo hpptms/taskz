@@ -5353,28 +5353,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -28692,129 +28670,7 @@ var render = function () {
           [
             _c("br"),
             _vm._v(" "),
-            _c("div", { staticClass: "form-group row" }, [
-              _c(
-                "label",
-                {
-                  staticClass: "col-sm-3 col-form-label",
-                  attrs: { for: "Sector" },
-                },
-                [_vm._v("Sector")]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-check" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.task.s_id,
-                      expression: "task.s_id",
-                    },
-                  ],
-                  staticClass: "form-check-input",
-                  attrs: { type: "radio", name: "Sector", value: "1" },
-                  domProps: { checked: _vm._q(_vm.task.s_id, "1") },
-                  on: {
-                    change: function ($event) {
-                      return _vm.$set(_vm.task, "s_id", "1")
-                    },
-                  },
-                }),
-                _vm._v(" "),
-                _c(
-                  "label",
-                  { staticClass: "form-check-label", attrs: { for: "one" } },
-                  [_vm._v("「重要」で「緊急」なもの")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-check" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.task.s_id,
-                      expression: "task.s_id",
-                    },
-                  ],
-                  staticClass: "form-check-input",
-                  attrs: { type: "radio", name: "Sector", value: "2" },
-                  domProps: { checked: _vm._q(_vm.task.s_id, "2") },
-                  on: {
-                    change: function ($event) {
-                      return _vm.$set(_vm.task, "s_id", "2")
-                    },
-                  },
-                }),
-                _vm._v(" "),
-                _c(
-                  "label",
-                  { staticClass: "form-check-label", attrs: { for: "one" } },
-                  [_vm._v("「重要」だけど「緊急」でないもの")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-check" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.task.s_id,
-                      expression: "task.s_id",
-                    },
-                  ],
-                  staticClass: "form-check-input",
-                  attrs: { type: "radio", name: "Sector", value: "3" },
-                  domProps: { checked: _vm._q(_vm.task.s_id, "3") },
-                  on: {
-                    change: function ($event) {
-                      return _vm.$set(_vm.task, "s_id", "3")
-                    },
-                  },
-                }),
-                _vm._v(" "),
-                _c(
-                  "label",
-                  { staticClass: "form-check-label", attrs: { for: "one" } },
-                  [_vm._v("「重要」ではないが「緊急」なもの")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-check" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.task.s_id,
-                      expression: "task.s_id",
-                    },
-                  ],
-                  staticClass: "form-check-input",
-                  attrs: { type: "radio", name: "Sector", value: "4" },
-                  domProps: { checked: _vm._q(_vm.task.s_id, "4") },
-                  on: {
-                    change: function ($event) {
-                      return _vm.$set(_vm.task, "s_id", "4")
-                    },
-                  },
-                }),
-                _vm._v(" "),
-                _c(
-                  "label",
-                  { staticClass: "form-check-label", attrs: { for: "one" } },
-                  [_vm._v("「重要」でもないが「緊急」でもないもの")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("span", {
-                staticStyle: { display: "none" },
-                attrs: { id: "is_Sector" },
-              }),
-            ]),
+            _vm._m(0),
             _vm._v(" "),
             _c("div", { staticClass: "form-group row" }, [
               _c(
@@ -28897,7 +28753,30 @@ var render = function () {
     ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group row" }, [
+      _c(
+        "label",
+        { staticClass: "col-sm-3 col-form-label", attrs: { for: "Sector" } },
+        [_vm._v("Sector")]
+      ),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "col-sm-9 form-control",
+        attrs: { id: "Sector" },
+      }),
+      _vm._v(" "),
+      _c("span", {
+        staticStyle: { display: "none" },
+        attrs: { id: "is_Sector" },
+      }),
+    ])
+  },
+]
 render._withStripped = true
 
 

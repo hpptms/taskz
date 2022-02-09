@@ -17,29 +17,7 @@
                         <label for="Sector" class="col-sm-3 col-form-label"
                             >Sector</label
                         >
-                        <!-- <input
-                            type="text"
-                            class="col-sm-9 form-control"
-                            id="Sector"
-                            :value="task.s_id"
-                            @input="task.s_id = $event.target.value"
-                        /> -->
-                        <div class="form-check">
-                        <input type="radio" class="form-check-input" name="Sector" value="1" v-model="task.s_id">
-                        <label class="form-check-label" for="one">「重要」で「緊急」なもの</label>
-                        </div>
-                        <div class="form-check">
-                        <input type="radio" class="form-check-input" name="Sector" value="2" v-model="task.s_id">
-                        <label class="form-check-label" for="one">「重要」だけど「緊急」でないもの</label>
-                        </div>
-                        <div class="form-check">
-                        <input type="radio" class="form-check-input" name="Sector" value="3" v-model="task.s_id">
-                        <label class="form-check-label" for="one">「重要」ではないが「緊急」なもの</label>
-                        </div>
-                        <div class="form-check">
-                        <input type="radio" class="form-check-input" name="Sector" value="4" v-model="task.s_id">
-                        <label class="form-check-label" for="one">「重要」でもないが「緊急」でもないもの</label>
-                        </div>
+                        <div class="col-sm-9 form-control" id="Sector"></div>
                         <span style="display:none;" id="is_Sector"></span>
                     </div>
                     <div class="form-group row">
