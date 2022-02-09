@@ -42,10 +42,9 @@ $(document).on("click blur", "#list", function () {
     };
 
     ;
-    console.log('wait 5sec right now!');
     wait(3).done(function () {
-      console.log('5sec spaned!');
       $('.contents').remove();
+      $('.content').remove();
       mini();
     });
   }
