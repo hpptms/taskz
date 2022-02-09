@@ -29049,7 +29049,7 @@ var render = function () {
         _vm._v(" "),
         _vm._l(_vm.tasks, function (task, index) {
           return _c("tr", { key: index }, [
-            _c("th", { attrs: { scope: "row" } }, [_vm._v(_vm._s(task.id))]),
+            _c("th", { attrs: { scope: "row" } }, [_vm._v(_vm._s(index))]),
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(task.sector))]),
             _vm._v(" "),

@@ -13,7 +13,7 @@
         </tr>
       </thead>
       <tr v-for="(task, index) in tasks" :key="index">
-        <th scope="row">{{ task.id }}</th>
+        <th scope="row">{{ index }}</th>
         <td>{{ task.sector }}</td>
         <td>{{ task.title }}</td>
         <td>{{ task.content }}</td>
