@@ -26,7 +26,7 @@ window.Vue = require("vue").default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component("header-component", HeaderComponent).default;
-Vue.component("tasklist-component", TaskCreateComponent).default;
+Vue.component("tasklist-component", TaskListComponent).default;
 
 
 Vue.use(VueRouter);

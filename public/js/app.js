@@ -5701,7 +5701,7 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component("header-component", _components_HeaderComponent__WEBPACK_IMPORTED_MODULE_0__["default"])["default"];
-Vue.component("tasklist-component", _components_TaskCreateComponent__WEBPACK_IMPORTED_MODULE_3__["default"])["default"];
+Vue.component("tasklist-component", _components_TaskListComponent__WEBPACK_IMPORTED_MODULE_1__["default"])["default"];
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]({
   mode: "history",

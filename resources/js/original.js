@@ -21,6 +21,9 @@ $(function () {
 });
 
 $(window).on('load resize', function(){
+    if($('#login_user').val() === void 0 || $('#session').val() === void 0){
+        alert('ログインして下さい');
+    }
     if($(window).width() < 768){
         $('.explanation1').html('「重要」で<br>「緊急」なもの');
         $('.explanation2').html('「重要」だけど<br>「緊急」でないもの');
